@@ -1,0 +1,9 @@
+.custom-parent-border{
+    border: 4px solid #ff9900;
+}
+.custom-child-border{
+    border: 3px solid #cd0505;
+}
+.custom-child1-bg{
+    background-color: #4796e5;
+}
