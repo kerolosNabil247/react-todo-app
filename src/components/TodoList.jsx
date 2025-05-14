@@ -28,7 +28,7 @@ export default function TodoList() {
             item.id === id ? {...item, completed: !item.completed} : item
     ))}
   return (
-    <div className='container'>
+    <div className='container mt-5'>
       <div className="parent custom-parent-border">
         {/* here is the first child */}
         <div className="child1 custom-child-border m-2">
