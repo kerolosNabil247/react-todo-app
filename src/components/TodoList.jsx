@@ -18,6 +18,15 @@ export default function TodoList() {
             setTasks([...tasks, newTask]);
         }
     }
+
+    const handleOnTodoDelete = (id) => {
+        setTasks(tasks.filter((task) => task.id !== id))
+    }
+
+    const handleOnTodoComplete = (id) => {
+        setTasks(tasks.map((item) => 
+            item.id === id ? {...item, completed: !item.completed} : item
+    ))}
   return (
     <div className='container'>
       <div className="parent custom-parent-border">
@@ -27,7 +36,11 @@ export default function TodoList() {
         </div>
         {/* here is the second child */}
         <div className="child2 custom-child-border m-2">
-            <Child2></Child2>
+            <Child2 
+            tasks={tasks}
+            onTodoDelete={handleOnTodoDelete}
+            onTodoComplete={handleOnTodoComplete}
+            ></Child2>
         </div>
       </div>
     </div>
